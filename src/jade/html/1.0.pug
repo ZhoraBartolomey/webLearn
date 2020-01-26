@@ -1,0 +1,43 @@
+extends ../../lesson.pug
+
+block lessonVars
+    - var back = '/html/0.1.html';
+    - var next = '/html/2.0.html';
+    - var type = 'HTML'
+block lesson
+    h1 HTML - основная структура
+
+    p.
+        HTML имеет свою структуру.
+        Корень является тег #[code html].
+        Внутри него находятся 2 тега: #[code head] и #[code body].
+    h2 Элемент #[code head]
+    p.
+        #[code head] предназначен для передачи браузеру необходимой мета-информации.
+        Например, заголовок сайта, описание сайта, ключевые слова и связи с CSS.
+    p.
+        Тег meta:
+        #[pre #[code.html #{'<meta name="название" content="значение">'}]] 
+    p.
+        Тег title:
+        #[pre #[code #{'<title>Название сайта</title>'}]]
+    p Мы вернёмся к head чуть попозже, когда будем изучать CSS.
+    
+    h2 Элемент #[code body]
+    p.
+        Body - это элемент, в котором должны находится теги, которые будут отображены пользователю.
+    h2 Общая структура документа
+    :markdown-it
+        ```html
+        <html>
+            <head>
+                <title>Мой сайт</title>
+                <meta charset="utf-8"/>
+            </head>
+            <body>
+                <p>
+                    Мой сайт
+                </p>
+            </body>
+        </html>
+        ```

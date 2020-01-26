@@ -1,0 +1,28 @@
+extends ../layout.pug
+
+block content
+    div(id='main-grid')
+        h1(class='header') Хотите научится программировать? 
+        p(class='desc').
+            Web Learn - это интерактивный онлайн учебник, который поможет вам в
+            обучении веб-разработки
+        img(class='img', src='http://jem-space.ru/content/images/2018/02/css.jpg')
+    div(id='getting-started')
+        h1 С чего начнём?
+        div(class='columns cards')
+            a(class='html', href='/html/0.1.html')
+                h2 HTML
+                p HTML (Hyper-Text Markup Language) - это язык разметки, каркас сайта.
+                p Рекомендуется изучать его первым.
+            a(class='css', href='/css/0.1')
+                h2 CSS
+                p
+                    | CSS (Cascading Style Sheets) - язык таблиц стилей, который позволяет прикреплять
+                    | стили к HTML.
+            div(class='js', href='/js/0.1')
+                h2 JS
+                p
+                    | Javascript - это язык программирования, который был создан
+                    | для добавления динамики веб-страницам.
+block styles
+    link(rel='stylesheet', href='/css/landing.css')

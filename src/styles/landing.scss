@@ -1,0 +1,59 @@
+#main-grid {
+    display: grid;
+    grid-template-areas:
+    "header img"
+    "desc   img";
+    grid-template-columns: 1fr 2fr;
+    
+    >.header {
+        grid-area: header;
+        padding: 0.5em;
+        word-wrap: break-word;
+    }
+    >.desc {
+        grid-area: desc;
+        overflow-wrap: normal;
+        word-wrap: break-word;
+        padding: 0.5em;
+        font-size: 1.4em;
+    }
+    >.img {
+        grid-area: img;
+        // width: 100%;
+        // height: auto;
+        object-fit: cover;
+    }
+
+    @media all and (max-width: 1000px) {
+        grid-template-rows: 1fr auto;
+        grid-template:
+        "header"
+        "desc"
+        "img";
+        color: white;
+        background-image: url(http://jem-space.ru/content/images/2018/02/css.jpg);
+        background-size: cover;
+        grid-template-columns: 1fr;
+        font-size: 15px;
+        >.img {
+            display: none;
+        }
+    }
+}
+
+#getting-started {
+    padding: 1em;
+    
+    .html {
+        color: white;
+        background: rgb(218, 74, 39);
+    }
+    .css {
+        color: white;
+        background: rgb(39, 120, 218);
+    }
+    .js {
+        color: black;
+        background: rgb(255, 248, 45);
+    }
+}
